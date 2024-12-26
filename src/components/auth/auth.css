@@ -1,0 +1,85 @@
+.center-container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 220px;
+}
+.login, .signup{
+    height: 100%;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: var(--rad1);
+    display: flex;
+    box-shadow: 0 40px 40px 1px #00000040;
+}
+
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+
+    input{
+        color: var(--main);
+        width: 100%;
+        border-left: 5px solid var(--main);
+        font-size: 18px;
+        background-color: var(--gray);
+        padding: 15px;
+        border-radius: 0px  var(--rad2)  var(--rad2) 0;
+    }
+    
+}
+
+.input-box.half{
+    flex-direction: row;
+    gap: 30px;
+}
+
+.login{
+    form{
+        flex: 1;
+        padding: 55px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        color: var(--main);
+
+        h1{
+            font-size: 40px;
+        }
+    }
+    .img-box{
+        flex: 1;
+        overflow: hidden;
+        border-radius: 0 var(--rad1) var(--rad1) 0;
+        background-color: var(--main);
+        text-align: end;
+
+        img{
+            height: 100%;
+            margin-left: 30px;
+        }
+    }
+}
+
+.signup{
+
+    form{
+        padding: 55px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        color: var(--main);
+    }
+    .logo{
+        width: 40%;
+        font-size: 22px;
+        border-radius: var(--rad1) 0 0  var(--rad1);
+        background-color: var(--main);
+        display: grid;
+        place-content: center;
+        color: var(--white);
+    }
+}
