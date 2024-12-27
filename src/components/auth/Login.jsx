@@ -19,7 +19,7 @@ const Login = () => {
             Log in
           </button>
           <p className="center mt-10">
-            Don’t have an account? {"  "}
+            Don't have an account? {"  "}
             <Link className="bold" to="/signup">
               Create an account
             </Link>

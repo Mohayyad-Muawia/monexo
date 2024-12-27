@@ -3,19 +3,21 @@
 :root{
   --main: #032A61;
   --gray: #D9D9D9;
-  --white: #ffffff;
+  --white: #FAFAFA;
 
   --rad1: 30px;
-  --rad2: 10px;
+  --rad2: 15px;
+  --rad3: 10px;
 
   --trans: .2s;
+
+  --shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
 }
 
 body{
   background-color: var(--gray);
   font-family: "Cairo", serif;
 }
-
 *{
   margin: 0;
   padding: 0;
@@ -44,16 +46,23 @@ body{
   color: var(--white);
   background-color: var(--main);
   border: 2px solid transparent;
-  border-radius: var(--rad2);
+  border-radius: var(--rad3);
   font-weight: bold;
   transition: var(--trans);
   cursor: pointer;
 }
-
-.pry-btn:hover{
-  color: var(--main);
-  background-color: var(--white);
-  border-color: var(--main);
+.hov, .hov2{
+  transition: var(--trans);
+}
+.pry-btn:hover, .hov:hover{
+  color: var(--main) !important;
+  background-color: var(--white) !important;
+  border-color: var(--main) !important;
+}
+.hov2:hover{
+  color: var(--white) !important;
+  background-color: var(--main) !important;
+  /* border-color: var(--main) !important; */
 }
 
 .mt-10{
@@ -64,4 +73,18 @@ body{
 }
 .mt-30{
   margin-top: 30px;
+}
+
+.overlay{
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.562);
+  z-index: 98;
+  transition: .3s;
+}
+.overlay.show{
+  right:  0;
 }

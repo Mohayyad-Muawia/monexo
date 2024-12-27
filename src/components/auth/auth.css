@@ -20,14 +20,14 @@
     display: flex;
     flex-direction: column;
 
-    input{
+    input, select{
         color: var(--main);
         width: 100%;
         border-left: 5px solid var(--main);
         font-size: 18px;
         background-color: var(--gray);
         padding: 15px;
-        border-radius: 0px  var(--rad2)  var(--rad2) 0;
+        border-radius: 0px  var(--rad3)  var(--rad3) 0;
     }
     
 }
@@ -35,6 +35,11 @@
 .input-box.half{
     flex-direction: row;
     gap: 30px;
+
+    *{
+        flex: 1;
+    }
+
 }
 
 .login{

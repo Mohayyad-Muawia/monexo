@@ -1,0 +1,91 @@
+.sidebar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin: 20px;
+    height: calc(100vh - 40px);
+    width: 70px;
+    background-color: var(--white);
+    border-radius: var(--rad2);
+    box-shadow: var(--shadow);
+    padding: 15px 0;
+    display: flex;
+    flex-flow: column;
+    gap: 15px;
+    transition: .3s;
+
+    a{
+        height: 40px;
+        margin: 0 15px;
+        padding: 0 8px;
+        display: flex;
+        align-items: center;
+        border-radius: var(--rad3);
+        position: relative;
+        overflow: hidden;
+        transition: var(--trans);
+        .wrapper{
+            width: 100px;
+            overflow: hidden;
+        }
+    
+    }
+    a.active{
+        background-color: var(--main);
+        i,span{
+            color: var(--white);
+        }
+    }
+    a.active:hover{
+        background-color: var(--main);
+    }
+    a:hover{
+        background-color: var(--gray);
+    }
+    a.active::before{
+        content: "";
+        position: absolute;
+        left: -15px;
+        width: 5px;
+        height: 30px;
+        border-radius: 0 5px 5px 0;
+        background-color: var(--main);
+    }
+    i{
+        font-size: 24px;
+        color: var(--main);
+
+    }
+    span{
+        position: absolute;
+        left: 60px;
+        text-wrap: nowrap;
+        font-weight: bold;
+        text-transform: capitalize;
+        color: var(--main);
+        user-select: none;
+    }
+}
+
+.sidebar:hover{
+    width: 200px;
+}
+
+
+header{
+    display: flex;
+    align-items: center;
+    padding: 10px 120px;
+    color: var(--main);
+
+    .icons{
+        margin-left: auto;
+        display: flex;
+        gap: 40px;
+
+        a{
+            font-size: 24px;
+            cursor: pointer;
+        }
+    }
+}
