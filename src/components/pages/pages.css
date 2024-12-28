@@ -306,3 +306,95 @@
         flex: 2.8;
     }
 }
+
+
+
+/* sittings  */
+.sittings{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    color: var(--main);
+
+    .menu{
+        flex: 1;
+    }
+    .content{
+        flex: 2;
+    }
+
+    .options{
+        margin-top: 30px;
+        font-size: 20px;
+        font-weight: bold;
+        display: flex;
+        flex-flow: column;
+        width: fit-content;
+        gap: 20px;
+        transition: var(--trans);
+
+        a{
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            cursor: pointer;
+            position: relative;
+            padding: 5px 15px;
+            transition: var(--trans);
+
+            *{
+                transition: var(--trans);
+            }
+
+            span{
+                width: 130px;
+            }
+
+        }
+        a:hover{
+            background-color: var(--white);
+            border-radius: var(--rad3);
+
+            svg:last-child{
+                transform: translateX(10px);
+            }
+        }
+        a:after{
+            position: absolute;
+            bottom: -10px;
+            content: '';
+            width: 0%;
+            height: 2px;
+            background-color: var(--main);
+            transition: .2s;
+        }
+        a.active:after{
+           width: 90%;
+        }
+
+    }
+    .logout{
+        color: rgba(214, 62, 62, 0.911);
+    }
+}
+
+.edit-profile{
+    
+    .inputs{
+        padding: 30px 140px;
+        padding-left: 0;
+        display: flex;
+        flex-flow: column;
+        gap: 20px;
+
+    }
+    input{
+        background-color: var(--white);
+    }
+    button{
+        width: 240px;
+    }
+    button:hover{
+        background-color: var(--gray) !important;
+    }
+}

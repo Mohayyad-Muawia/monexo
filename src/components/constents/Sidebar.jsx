@@ -25,8 +25,8 @@ const Sidebar = () => {
         <i className="bi bi-calendar-date-fill"></i> <span>calender</span>
       </Link>
 
-      <Link to="/sitings">
-        <i className="bi bi-gear-fill"></i> <span>sitings</span>
+      <Link to="/sittings">
+        <i className="bi bi-gear-fill"></i> <span>sittings</span>
       </Link>
 
       <Link to="/trans">

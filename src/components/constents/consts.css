@@ -13,6 +13,7 @@
     flex-flow: column;
     gap: 15px;
     transition: .3s;
+    z-index: 96;
 
     a{
         height: 40px;

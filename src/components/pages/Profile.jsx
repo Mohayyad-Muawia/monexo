@@ -1,3 +1,5 @@
+import "./pages.css";
+
 const Profile = () => {
   return (
     <div className="container">

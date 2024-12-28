@@ -1,3 +1,5 @@
+import "./pages.css";
+
 const Sources = () => {
   return (
     <div className="sources">
