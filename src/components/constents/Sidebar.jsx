@@ -36,8 +36,13 @@ const Sidebar = () => {
         <i className="bi bi-calendar-date-fill"></i> <span>calender</span>
       </Link>
 
+<<<<<<< HEAD
       <Link to="/sittings">
         <i className="bi bi-gear-fill"></i> <span>sittings</span>
+=======
+      <Link to="/settings">
+        <i className="bi bi-gear-fill"></i> <span>settings</span>
+>>>>>>> cd9377f (charts)
       </Link>
 
       <Link to="/trans">
