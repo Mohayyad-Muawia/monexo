@@ -31,7 +31,6 @@ function Layout() {
         <Route path="/login" Component={Login} />
         <Route path="/signup" Component={Signup} />
         <Route path="/profile" Component={Profile} />
-        {/* <Route path="/profile/edit" Component={EditProfile} /> */}
         <Route path="/calender" Component={Calender} />
         <Route path="/sittings" Component={Sittings} />
         <Route path="/trans" Component={Trans} />

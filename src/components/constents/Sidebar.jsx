@@ -7,14 +7,25 @@ const Sidebar = () => {
 
     links.forEach((link) => {
       link.addEventListener("click", () => {
-        document.querySelector("a.active").classList.remove("active");
+        const activeLink = document.querySelector("a.active");
+
+        if (activeLink) {
+          activeLink.classList.remove("active");
+        }
+
         link.classList.add("active");
       });
     });
-  });
+
+    return () => {
+      links.forEach((link) => {
+        link.removeEventListener("click", () => {});
+      });
+    };
+  }, []);
   return (
     <div className="sidebar">
-      <Link to="/" className="home active">
+      <Link to="/" className="home">
         <i className="bi bi-house-fill"></i> <span>home</span>
       </Link>
       <Link to="/profile">
@@ -35,12 +46,12 @@ const Sidebar = () => {
       </Link>
 
       <Link to="/sources">
-        <i class="bi bi-collection-play-fill"></i>
+        <i className="bi bi-collection-play-fill"></i>
         <span>sources</span>
       </Link>
 
       <a>
-        <i class="bi bi-bell-fill"></i>
+        <i className="bi bi-bell-fill"></i>
         <span>notifications</span>
       </a>
 

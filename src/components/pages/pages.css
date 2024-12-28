@@ -316,11 +316,33 @@
     height: 100%;
     color: var(--main);
 
+
     .menu{
         flex: 1;
     }
     .content{
         flex: 2;
+        padding-right: 150px;
+        
+        h1{
+            margin-bottom: 20px;
+        }
+
+        label{
+            font-weight: bold;
+        }
+
+        input{
+            background-color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        button{
+            width: 240px;
+        }
+        button:hover{
+            background-color: var(--gray) !important;
+        }    
     }
 
     .options{
@@ -351,7 +373,7 @@
             }
 
         }
-        a:hover{
+        a.active{
             background-color: var(--white);
             border-radius: var(--rad3);
 
@@ -368,7 +390,7 @@
             background-color: var(--main);
             transition: .2s;
         }
-        a.active:after{
+        a:hover:after{
            width: 90%;
         }
 
@@ -376,25 +398,28 @@
     .logout{
         color: rgba(214, 62, 62, 0.911);
     }
+    
+}
+/* Styling for the error message */
+.error-message {
+    position: absolute;
+    bottom: -100px;
+    width: 100%;
+    color: #ff4d4d; /* Red color for error */
+    background-color: #ffe6e6; /* Light red background */
+    border: 1px solid #ff4d4d;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .edit-profile{
     
     .inputs{
-        padding: 30px 140px;
-        padding-left: 0;
         display: flex;
         flex-flow: column;
-        gap: 20px;
-
-    }
-    input{
-        background-color: var(--white);
-    }
-    button{
-        width: 240px;
-    }
-    button:hover{
-        background-color: var(--gray) !important;
     }
 }
