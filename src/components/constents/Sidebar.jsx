@@ -34,6 +34,16 @@ const Sidebar = () => {
         <span>transactions</span>
       </Link>
 
+      <Link to="/sources">
+        <i class="bi bi-collection-play-fill"></i>
+        <span>sources</span>
+      </Link>
+
+      <a>
+        <i class="bi bi-bell-fill"></i>
+        <span>notifications</span>
+      </a>
+
       <Link to="/login" style={{ marginTop: "auto" }}>
         <i className="bi bi-box-arrow-left"></i> <span>log out</span>
       </Link>

@@ -78,7 +78,7 @@
                 flex: .2;
                 margin-left: auto;
 
-                a{
+                .open-menu{
                     width: 30px;
                     height: 30px;
                     display: grid;
@@ -93,7 +93,8 @@
         } /* t*/
     } /* actions*/
 
-    .add-form{
+    .add-form,
+    .edit-form {
         position: fixed;
         top: 50%;
         left: 150%;
@@ -103,31 +104,205 @@
         width: 60vw;
         padding: 20px 40px 50px;
         border-radius: var(--rad2);
-        transition: .3s;
+        transition: 0.3s;
         box-shadow: var(--shadow);
-
-        .top{
+    
+        .top {
             display: flex;
             justify-content: space-between;
-            .close-form{
+    
+            .close-form {
                 color: var(--main);
                 font-size: 36px;
                 cursor: pointer;
             }
         }
-
-        .input-box{
+    
+        .input-box {
             margin-top: 10px;
         }
-
-        button{
+    
+        button {
             margin-top: 40px;
             font-size: 18px;
             height: 50px;
+            width: 250px;
             padding: 0;
         }
-    } /*add form*/
-    .add-form.show{
+    } /* Shared styles for add and edit forms */
+    
+    .add-form.show,
+    .edit-form.show {
         left: 50%;
+    }
+        .dropdown {
+        display: none;
+        position: absolute;
+        background-color: var(--white);
+        box-shadow: var(--shadow);
+        border-radius: var(--rad2);
+        z-index: 99;
+      }
+      
+      .dropdown.show {
+        display: block;
+      }
+      
+      .dropdown a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: var(--main);
+        cursor: pointer;
+      }
+      
+      .dropdown a:hover {
+        background-color: var(--gray);
+      }
+      
+      .dropdown-menu {
+        position: absolute;
+        background-color: var(--white);
+        box-shadow: var(--shadow);
+        border-radius: var(--rad3);
+        top: 30px;
+        right: 0;
+        min-width: 120px;
+        padding: 10px 0;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        transition: 0.3s ease;
+      }
+      
+      .dropdown-item {
+        padding: 10px 15px;
+        font-size: 16px;
+        color: var(--main);
+        text-decoration: none;
+        cursor: pointer;
+        transition: 0.3s ease;
+      }
+      
+      .dropdown-item:hover {
+        background-color: var(--gray);
+        color: var(--dark);
+      }
+      
+      .open-menu {
+        position: relative;
+      }
+      
+      .opt {
+        position: relative;
+      }
+      
+}
+
+
+
+/* profile */
+.profile{
+    display: flex;
+    gap: 30px;
+
+}
+
+.left{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    color: var(--main);
+
+    .income, .expense{
+        padding: 15px 30px;
+        height: 200px;
+        border-radius: var(--rad2);
+        background-color: aliceblue;
+        margin-bottom: 25px;
+        margin-top: 10px;
+    }
+    
+    h2{
+        font-size: 27px;
+    }
+    h2:last-child{
+        margin-top: 60px;
+        text-align: end;
+    }
+}
+
+.day,.month{
+    display: flex;
+    gap: 30px;
+
+    *{
+        flex: 1;
+    }
+}
+
+.day .income{
+    background-image: linear-gradient(45deg, #56777A, #9EDAE0);
+}
+.day .expense{
+    background: linear-gradient(45deg, #CDA1D3, #6A536D);
+}
+.month .income{
+    background: linear-gradient(45deg, #4c7c4c, #B3FFAB);
+}
+.month .expense{
+    background: linear-gradient(45deg, #ad5d5d, #ffc0c0);}
+
+
+.right{
+    flex: 1;
+
+    h1{
+        color: var(--main);
+        margin-bottom: 10px;
+    }
+    .card{
+        background-color: var(--white);
+        border-radius: var(--rad2);
+        text-align: center;
+        overflow: hidden;
+
+        .pfp{
+            height: fit-content;
+            position: relative;
+            background: linear-gradient(45deg, var(--main), #7db0ce);
+            height: 250px;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            display: flex;
+            
+            svg{
+                width: 150px;
+                color: var(--white);
+            }
+        }
+    }
+}
+
+.info{
+    padding: 0 70px 50px;
+}
+.info p{
+    display: flex;
+    font-size: 22px;
+    font-weight: bold;
+
+    span{
+        text-align: left;
+    }
+    span:nth-child(1){
+        flex: 1;
+    }
+    span:nth-child(2){
+        flex: 1;
+    }
+    span:nth-child(3){
+        flex: 2.8;
     }
 }

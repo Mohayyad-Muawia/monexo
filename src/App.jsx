@@ -13,6 +13,8 @@ import Calender from "./components/pages/Calender";
 import Sitings from "./components/pages/Sitings";
 import Trans from "./components/pages/Trans";
 import Home from "./components/Home";
+import Sources from "./components/pages/Sources";
+import EditProfile from "./components/pages/EditProfile";
 
 function Layout() {
   const location = useLocation();
@@ -30,9 +32,11 @@ function Layout() {
         <Route path="/login" Component={Login} />
         <Route path="/signup" Component={Signup} />
         <Route path="/profile" Component={Profile} />
+        <Route path="/profile/edit" Component={EditProfile} />
         <Route path="/calender" Component={Calender} />
         <Route path="/sitings" Component={Sitings} />
         <Route path="/trans" Component={Trans} />
+        <Route path="/sources" Component={Sources} />
       </Routes>
     </>
   );
