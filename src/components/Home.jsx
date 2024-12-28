@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-const Home = () => {
-  return (
-    <>
-      <div className="home"></div>
-    </>
-=======
 import React from "react";
 import { Doughnut } from "react-chartjs-2";
 import { Bar } from "react-chartjs-2";
@@ -30,13 +23,24 @@ ChartJS.register(
 );
 
 const Home = () => {
+  // Data for all
+  const allData = {
+    labels: ["Transaction", "Expenses", "Income"],
+    datasets: [
+      {
+        data: [120, 20, 100], // Data for Total Transaction
+        backgroundColor: ["#FFC107", "#C62626", " #B156B8"], // Colors for Total Transaction
+      },
+    ],
+  };
+
   // Data for Total Transaction Doughnut Chart
   const transactionData = {
     labels: ["Completed", "Pending", "Canseled"],
     datasets: [
       {
         data: [60, 30, 10], // Data for Total Transaction
-        backgroundColor: ["#032A61", "#FCE919", "#FF6347"], // Colors for Total Transaction
+        backgroundColor: ["#032A61", "#FFC107", "#FF6347"], // Colors for Total Transaction
       },
     ],
   };
@@ -47,7 +51,7 @@ const Home = () => {
     datasets: [
       {
         data: [200, 500, 300], // Data for Total Expenses
-        backgroundColor: ["#FF6347", "#FFD700", "#8A2BE2"], // Colors for Total Expenses
+        backgroundColor: ["#FF6347", "#FFC107", "#8A2BE2"], // Colors for Total Expenses
       },
     ],
   };
@@ -105,28 +109,56 @@ const Home = () => {
               gap: "20px",
             }}
           >
-            <div className="dnt">
+            <div className="box">
               <h3>Total Transaction</h3>
-              <Doughnut data={transactionData} />
+              <div className="dnt">
+                <Doughnut data={transactionData} />
+              </div>
             </div>
-            <div className="dnt">
+
+            <div className="box">
               <h3>Total Expenses</h3>
-              <Doughnut data={expensesData} />
+              <div className="dnt">
+                <Doughnut data={expensesData} />
+              </div>
             </div>
-            <div className="dnt">
+
+            <div className="box">
               <h3>Total Income</h3>
-              <Doughnut data={incomeData} />
+              <div className="dnt">
+                <Doughnut data={incomeData} />
+              </div>
             </div>
           </div>
-          <div style={{ marginTop: "20px", width: "400px", height: "400px" }}>
-            <Bar data={barData} />
+
+          <div className="bars">
+            <div>
+              <Doughnut data={allData} />
+            </div>
+
+            <div className="bar" style={{ marginTop: "10px", width: "450px" }}>
+              <Bar data={barData} />
+            </div>
           </div>
         </div>
 
-        <div className="states"></div>
+        <div className="states">
+          <h2>States</h2>
+          <div className="tran">
+            <h4>Total Transactions</h4>
+            <div className="num">$120,000</div>
+          </div>
+          <div className="exp">
+            <h4>Total Expense</h4>
+            <div className="num">$20,000</div>
+          </div>
+          <div className="inc">
+            <h4>Total Income</h4>
+            <div className="num">$100,000</div>
+          </div>
+        </div>
       </div>
     </div>
->>>>>>> cd9377f (charts)
   );
 };
 

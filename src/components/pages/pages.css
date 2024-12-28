@@ -309,13 +309,8 @@
 
 
 
-<<<<<<< HEAD
-/* sittings  */
-.sittings{
-=======
 /* settings  */
 .settings{
->>>>>>> cd9377f (charts)
     display: flex;
     width: 100%;
     height: 100%;
@@ -405,10 +400,7 @@
     }
     
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> cd9377f (charts)
 /* Styling for the error message */
 .error-message {
     position: absolute;
@@ -431,28 +423,180 @@
         display: flex;
         flex-flow: column;
     }
-<<<<<<< HEAD
-=======
 }
 
+.home{
+    display: flex;
+    gap: 20px;
+    max-height: 90vh;
+    overflow: hidden;
+}
 .charts{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
     .donts{
         display: flex;
+        flex-wrap: wrap;
     }
-    .dnt{
-        padding: 20px;
-        height: 300px;
+    .box{
+        min-width: 30%;
         flex: 1;
-        width: fit-content;
-        
-        canvas{
-            background-color: var(--white);
+        display: flex;
+        align-items: center;
+        border-radius: var(--rad2);
+        padding: 20px;
+        /* padding-left: 40px; */
+        background-color: var(--white);
 
-        }
         h3{
-            font-size: 28px;
+            font-size: 22px;
             color: var(--main);
         }
+
     }
->>>>>>> cd9377f (charts)
+    .dnt{
+        flex: 1;
+        padding: 15px;
+        height: 200px;
+        flex: 1;
+        width: fit-content;
+    }
+
+    .bars{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: var(--white);
+        border-radius: var(--rad2);
+    }
+    
+}
+
+.states{
+    width: 200px;
+    display: flex;
+    flex-flow: column;
+    padding: 20px 0;
+    align-items: center;
+    gap: 30px;
+    background-color: var(--white);
+    border-radius: var(--rad2);
+    color: var(--main);
+
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 7px;
+    }
+
+    .num{
+        display: flex;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: var(--white);
+        font-weight: bold;
+    }
+    .tran .num{
+        background: linear-gradient(45deg, #897F13C9, #FCE919);
+    }
+    .exp .num{
+        background: linear-gradient(45deg, #601212FC, #C62626);
+    }
+    .inc .num{
+        background: linear-gradient(45deg, #4F2652, #B156B8);
+    }
+}
+
+
+.sources{
+    .title{
+        color: var(--main);
+
+        h1{
+            width: fit-content;
+            border-bottom: 2px solid var(--main);
+            margin-bottom: 10px;
+        }
+
+    }
+    .swich{
+        background-color: var(--white);
+        display: flex;
+        gap: 5px;
+        padding: 7px;
+        width: fit-content;
+        margin: 25px auto;
+        border-radius: var(--rad2);
+        
+        a{
+            border-radius: var(--rad3);
+            padding: 5px 30px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        a.active{
+            background-color: var(--main);
+            color: var(--white);
+        }
+    }
+
+    .bk{
+        h3{
+            margin-top: 30px;
+        }
+        p{
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        a{
+            padding: 0 20px;
+            font-size: 16px;
+        }
+        a:hover{
+            background-color: var(--gray) !important;
+        }
+    }
+
+    .channels{
+        padding: 0 150px;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(4, 1fr);
+
+        .card{
+            height: 180px;
+            display: flex;
+            gap: 10px;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--main);
+            border: 4px solid var(--gray);
+            border-radius: var(--rad3);
+            background-color: var(--white);
+            transition: var(--trans);
+            box-shadow: var(--shadow);
+            padding: 30px;
+
+            img{
+                height: 80px;
+                width: 80px;
+                border: 2px solid var(--main);
+                border-radius: 50%;
+            }
+        }
+
+        .card:hover{
+            border-color: var(--main);
+        }
+    }
 }

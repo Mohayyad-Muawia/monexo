@@ -62,7 +62,6 @@ body{
 .hov2:hover{
   color: var(--white) !important;
   background-color: var(--main) !important;
-  /* border-color: var(--main) !important; */
 }
 
 .mt-10{
@@ -87,11 +86,4 @@ body{
 }
 .overlay.show{
   right:  0;
-<<<<<<< HEAD
-=======
-}
-
-.home{
-  
->>>>>>> cd9377f (charts)
 }
