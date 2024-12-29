@@ -224,12 +224,10 @@ const Trans = () => {
               <div className="input-box">
                 <label htmlFor="cati">Category</label>
                 <select id="cati">
-                  <option value="1"></option>
-                  <option value="2"></option>
-                  <option value="3"></option>
-                  <option value="4"></option>
-                  <option value="5"></option>
-                  <option value="6"></option>
+                  <option value="1">salary</option>
+                  <option value="2">gift</option>
+                  <option value="3">food</option>
+                  <option value="4">other</option>
                 </select>
               </div>
             </div>
