@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
-import "./consts.css";
 import { useEffect } from "react";
+import "./consts.css";
 const Sidebar = () => {
   useEffect(() => {
     const links = document.querySelectorAll(".sidebar a");
 
     links.forEach((link) => {
       link.addEventListener("click", () => {
-        const activeLink = document.querySelector("a.active");
+        const activeLink = document.querySelector(".sidebar a.active");
 
         if (activeLink) {
           activeLink.classList.remove("active");
@@ -46,10 +46,10 @@ const Sidebar = () => {
         <span>sources</span>
       </Link>
 
-      <a>
+      <Link to="notifications">
         <i className="bi bi-bell-fill"></i>
         <span>notifications</span>
-      </a>
+      </Link>
 
       <Link to="/login" style={{ marginTop: "auto" }}>
         <i className="bi bi-box-arrow-left"></i> <span>log out</span>

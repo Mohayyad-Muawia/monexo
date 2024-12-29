@@ -13,6 +13,7 @@ import Settings from "./components/pages/Settings";
 import Trans from "./components/pages/Trans";
 import Home from "./components/Home";
 import Sources from "./components/pages/Sources";
+import Notifications from "./components/pages/Notifications";
 
 function Layout() {
   const location = useLocation();
@@ -33,6 +34,7 @@ function Layout() {
         <Route path="/settings" Component={Settings} />
         <Route path="/trans" Component={Trans} />
         <Route path="/sources" Component={Sources} />
+        <Route path="/notifications" Component={Notifications} />
       </Routes>
     </>
   );
