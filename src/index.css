@@ -25,8 +25,12 @@ body{
   border: 0;
   box-sizing: border-box;
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
-
+*::selection{
+    background-color: var(--main);
+    color: var(--white);
+}
 .center{
   text-align: center;
 }
