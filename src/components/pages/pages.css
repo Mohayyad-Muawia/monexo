@@ -673,3 +673,255 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .container{
+        width: 100%;
+        overflow: hidden;
+        padding: 20px;
+        margin-bottom: 70px;
+    }    
+
+    .home{
+        max-height: fit-content;
+        flex-flow: column;
+    }
+
+    .charts{
+    }
+    .donts{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .box{
+        padding: 10px;
+
+        h3{
+            width: 80px;
+            padding-left: 20px;
+            font-size: 18px !important;
+            color: var(--main);
+        }
+
+    }
+
+    .bars{
+        flex-flow: column;
+        padding: 30px;
+        gap: 30px;
+
+        canvas:first-child{
+            width: 280px !important;
+            height: 300px !important;
+        }
+        canvas:last-child{
+            margin: auto;
+            width: 280px !important;
+            height: auto !important;
+        }
+    }
+
+    .states{
+        width: 100%;
+
+        div{
+            flex-direction: row;
+            gap: 20px;
+
+            h4{
+                width: 150px;
+                font-size: 24px !important;
+            }
+        }
+    }
+
+    /* profile */
+    .profile{
+        gap: 20px;
+        flex-flow: column;
+
+        .day,.month{
+            gap: 15px;
+        }
+        .income, .expense{
+            padding: 10px 20px;
+            height: 150px;
+            border-radius: var(--rad2);
+            background-color: aliceblue;
+            margin-bottom: 25px;
+            margin-top: 10px;
+
+            h2{
+                font-size: 20px;
+            }
+
+            h2:last-child{
+                margin-top: 40px;
+                text-align: end;
+            }
+        
+        }
+
+        .info{
+            padding: 0 30px 30px;
+
+            P{
+                font-size: 16px;
+            }
+        }
+    
+    }
+
+    /* trans */
+    .trans{
+        padding: 20px 30px 40px;
+
+        .top{
+            flex-wrap: wrap;
+            gap: 20px;
+
+            .add-trans{
+                width: 30px;
+                height: 30px;
+                font-size: 20px;
+            }
+        }
+        .actions{
+            p{
+                text-align: center;
+                white-space: nowrap;
+                font-size: 11px;    
+                text-wrap: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+        .opt{
+
+            .open-menu{
+                width: 20px !important;
+                height: 20px !important;
+                font-size: 14px !important;
+            }
+        }
+    }
+
+    .filter{
+        gap: 10px;
+        order: 3;
+
+        a{
+            padding: 2px 10px;
+
+            font-size: 12px;
+        }
+    }
+
+    .add-form,
+    .edit-form {
+        top: 0;
+        left: 0;
+        width: 100vw !important;
+        height: 100vh;
+
+        .top{
+            margin-top: 20px;
+            h1{
+                font-size: 28px;
+            }
+        }
+
+        .input-box.half{
+            flex-direction: column;
+            gap: 0px;     
+            
+        }
+
+    }
+
+    /* sources */
+    .sources{
+        h1{
+            font-size: 22px;
+        }
+        p{
+            font-size: 14px;
+        }
+
+        .swich{
+            a{
+                padding: 5px 15px;
+            }
+        }
+    }
+
+    .channels{
+        padding: 0 !important;
+        gap: 10px !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        
+        .card{
+            height: fit-content !important;
+            padding: 15px !important;
+            h3{
+                font-size: 13px !important;
+            }
+        }
+    }
+
+
+    .notifications{
+        padding: 20px;
+        h1{
+            font-size: 30px;
+        }
+
+        .item{
+            font-size: 12px !important;
+            padding-right: 20px !important;
+            gap: 10px !important;
+
+            p{
+                text-align: center;
+                white-space: nowrap;
+                font-size: 11px;    
+                text-wrap: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            .meta{
+                font-size: 8px;
+                color: var(--main);
+                span{
+                    margin: 0 0px !important;
+                }
+            }
+
+        }
+        .delete-btn{
+            font-size: 20px !important;
+            margin: 0 !important;
+        }
+        .item.new::after{
+            right: 10px !important;
+            height: 6px !important;
+            width: 6px !important;
+        }
+
+    }
+
+    /* settings */
+    .settings{
+        flex-flow: column;
+        gap: 40px;
+        h1{
+            font-size: 24px;
+        }
+        .menu{
+        }
+        .content{
+            padding: 0;
+        }
+    }
+
+}

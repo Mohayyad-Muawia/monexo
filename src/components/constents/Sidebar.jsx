@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import "./consts.css";
+
 const Sidebar = () => {
   useEffect(() => {
     const links = document.querySelectorAll(".sidebar a");
@@ -23,6 +24,7 @@ const Sidebar = () => {
       });
     };
   }, []);
+
   return (
     <div className="sidebar">
       <Link to="/" className="home">
@@ -46,9 +48,8 @@ const Sidebar = () => {
         <span>sources</span>
       </Link>
 
-      <Link to="notifications">
-        <i className="bi bi-bell-fill"></i>
-        <span>notifications</span>
+      <Link to="/notifications">
+        <i className="bi bi-bell-fill"></i> <span>notifications</span>
       </Link>
 
       <Link to="/login" style={{ marginTop: "auto" }}>

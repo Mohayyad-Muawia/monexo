@@ -1,7 +1,6 @@
 .sidebar{
     position: fixed;
     left: 0;
-    top: 0;
     margin: 20px;
     height: calc(100vh - 40px);
     width: 70px;
@@ -43,15 +42,6 @@
     a:hover{
         background-color: var(--gray);
     }
-    a.active::before{
-        content: "";
-        position: absolute;
-        left: -15px;
-        width: 5px;
-        height: 30px;
-        border-radius: 0 5px 5px 0;
-        background-color: var(--main);
-    }
     i{
         font-size: 24px;
         color: var(--main);
@@ -72,22 +62,29 @@
     width: 200px;
 }
 
-
-header{
-    display: flex;
-    align-items: center;
-    padding: 10px 120px;
-    color: var(--main);
-
-    .icons{
-        margin-left: auto;
-        display: flex;
-        gap: 40px;
+@media (max-width: 768px) {
+    .sidebar{
+        margin: 0;
+        bottom: 0;
+        height: 70px;
+        flex-flow: row;
+        justify-content: space-evenly;
+        gap: 0;
+        width: 100vw;
+        border-radius: 0;
 
         a{
-            font-size: 24px;
-            cursor: pointer;
+            margin: 0;
+
+            span{
+                display: none;
+            }
+        }
+        a:last-child{
+            display: none;
         }
     }
+    .sidebar:hover{
+        width: 100vw;
+    }
 }
-
