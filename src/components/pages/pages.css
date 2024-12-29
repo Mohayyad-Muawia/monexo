@@ -589,12 +589,15 @@
             background-color: var(--white);
             transition: var(--trans);
             box-shadow: var(--shadow);
-            padding: 30px;
+            padding: 20px;
 
+            h3{
+                font-size: 16px;
+            }
             img{
                 height: 80px;
                 width: 80px;
-                border: 2px solid var(--main);
+                /* border: 2px solid var(--main); */
                 border-radius: 50%;
             }
         }

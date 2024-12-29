@@ -6,7 +6,9 @@ const Signup = () => {
     <div className="center-container">
       <div className="signup">
         <div className="logo">
+          <img src="/imgs/logo-w.png" alt="money" />
           <h1>Monexo</h1>
+          <h4>Your finances are in control</h4>
         </div>
 
         <form>

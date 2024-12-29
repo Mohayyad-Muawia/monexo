@@ -27,7 +27,9 @@ const Login = () => {
         </form>
 
         <div className="img-box">
-          <img src="/imgs/login.png" alt="money" />
+          <img src="/imgs/logo-w.png" alt="money" />
+          <h1>Monexo</h1>
+          <h3>Your finances are in control</h3>
         </div>
       </div>
     </div>
